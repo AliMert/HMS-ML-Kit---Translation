@@ -1,5 +1,6 @@
-This project is a demo app that uses HMS ML Kit's Real-Time Translation feature to translate text as you type.
 
-<img src="demo.gif" width="25%" height="25%"/>
+**<h1>HMS ML Kit - Translation</h1>**
 
-![Alt Text](demo.gif)
+ --> This project is a demo app that uses HMS ML Kit's Real-Time Translation feature to translate text as you type.
+
+ ![Alt Text](demo.gif) 
