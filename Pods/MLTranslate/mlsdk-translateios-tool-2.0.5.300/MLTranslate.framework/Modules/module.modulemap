@@ -1,0 +1,6 @@
+framework module MLTranslate {
+  umbrella header "MLTranslate.h"
+
+  export *
+  module * { export * }
+}

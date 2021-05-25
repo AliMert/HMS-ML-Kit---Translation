@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HMS_ML_Kit___Translation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Edq-Uc-NOb">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </imageView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cuy-OE-tvf">
+                                <rect key="frame" x="20" y="222" width="350" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="uMY-gd-P1t"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="HdH-Ie-ATA" kind="embed" identifier="translationSegue" id="Dpi-PV-hqC"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Edq-Uc-NOb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8E6-XP-v4X"/>
+                            <constraint firstItem="Edq-Uc-NOb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8Fz-ap-kb4"/>
+                            <constraint firstItem="cuy-OE-tvf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="EUg-kR-9bf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cuy-OE-tvf" secondAttribute="trailing" constant="20" id="Jpz-vB-qW8"/>
+                            <constraint firstItem="cuy-OE-tvf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="iqp-WL-fzk"/>
+                            <constraint firstAttribute="bottom" secondItem="Edq-Uc-NOb" secondAttribute="bottom" id="p5r-SC-jb4"/>
+                            <constraint firstItem="Edq-Uc-NOb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="u8q-uW-PEA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="translationView" destination="cuy-OE-tvf" id="1O6-J4-P3x"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="511" y="33"/>
+        </scene>
+        <!--Translation View Controller-->
+        <scene sceneID="HOx-ZW-ygk">
+            <objects>
+                <viewController id="HdH-Ie-ATA" customClass="TranslationViewController" customModule="HMS_ML_Kit___Translation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b3n-kK-bze">
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqX-Wf-4qo">
+                                <rect key="frame" x="0.0" y="0.0" width="350" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lLa-f7-KOr" customClass="CustomButton" customModule="HMS_ML_Kit___Translation" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="10" width="166.33333333333334" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Source Language" image="chevron.down" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="bold"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <state key="highlighted" title="Source Language">
+                                            <color key="titleColor" red="0.53798647280092593" green="0.53798647280092593" blue="0.53798647280092593" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageButton_pressed:" destination="HdH-Ie-ATA" eventType="touchUpInside" id="sCP-XS-93v"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" text="write to translate..." translatesAutoresizingMaskIntoConstraints="NO" id="6gF-TB-Duu">
+                                        <rect key="frame" x="8" y="40" width="334" height="114"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13089715866815477" green="0.13089715866815477" blue="0.13089715866815477" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lLa-f7-KOr" firstAttribute="leading" secondItem="bqX-Wf-4qo" secondAttribute="leading" constant="15" id="ATf-Fa-QKV"/>
+                                    <constraint firstItem="6gF-TB-Duu" firstAttribute="top" secondItem="lLa-f7-KOr" secondAttribute="bottom" constant="8" id="L5w-4l-XtW"/>
+                                    <constraint firstAttribute="trailing" secondItem="6gF-TB-Duu" secondAttribute="trailing" constant="8" id="LS5-Na-9yH"/>
+                                    <constraint firstItem="lLa-f7-KOr" firstAttribute="top" secondItem="bqX-Wf-4qo" secondAttribute="top" constant="10" id="MMV-xd-kJa"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lLa-f7-KOr" secondAttribute="trailing" constant="20" symbolic="YES" id="eMq-N1-2au"/>
+                                    <constraint firstItem="6gF-TB-Duu" firstAttribute="leading" secondItem="bqX-Wf-4qo" secondAttribute="leading" constant="8" id="j1Y-IM-LqZ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="29u-pt-Yqd">
+                                <rect key="frame" x="0.0" y="200" width="350" height="200"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rog-Ne-by3" customClass="CustomButton" customModule="HMS_ML_Kit___Translation" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="38" width="161.33333333333334" height="22"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Target Language" image="chevron.down" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="bold"/>
+                                        </state>
+                                        <state key="highlighted" title="Target Language">
+                                            <color key="titleColor" red="0.5379864728" green="0.5379864728" blue="0.5379864728" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="languageButton_pressed:" destination="HdH-Ie-ATA" eventType="touchUpInside" id="Xhl-0i-oEv"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YCh-BG-Jt9">
+                                        <rect key="frame" x="8" y="68" width="334" height="112"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardAppearance="alert"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11842499586640209" green="0.11842499586640209" blue="0.11842499586640209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="YCh-BG-Jt9" secondAttribute="trailing" constant="8" id="Bin-oy-PqF"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rog-Ne-by3" secondAttribute="trailing" constant="20" symbolic="YES" id="GTH-4H-whu"/>
+                                    <constraint firstItem="rog-Ne-by3" firstAttribute="leading" secondItem="29u-pt-Yqd" secondAttribute="leading" constant="15" id="HMM-RK-gx6"/>
+                                    <constraint firstItem="YCh-BG-Jt9" firstAttribute="leading" secondItem="29u-pt-Yqd" secondAttribute="leading" constant="8" id="IRI-Ya-Qxd"/>
+                                    <constraint firstItem="YCh-BG-Jt9" firstAttribute="top" secondItem="rog-Ne-by3" secondAttribute="bottom" constant="8" id="WQ1-Jr-aeQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="YCh-BG-Jt9" secondAttribute="bottom" constant="20" id="Yqk-9X-mDG"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mZ7-ij-flD">
+                                <rect key="frame" x="145" y="170" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.26505436972966268" green="0.26505436972966268" blue="0.26505436972966268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="WNq-pe-uoH"/>
+                                    <constraint firstAttribute="height" constant="60" id="lF8-It-0jT"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" image="translate"/>
+                                <connections>
+                                    <action selector="reverseLanguagesButton_pressed:" destination="HdH-Ie-ATA" eventType="touchUpInside" id="d2J-Hs-dLA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="s4B-aN-Uu1"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="29u-pt-Yqd" secondAttribute="trailing" id="4bl-Bp-9zk"/>
+                            <constraint firstItem="bqX-Wf-4qo" firstAttribute="height" secondItem="b3n-kK-bze" secondAttribute="height" multiplier="0.5" id="9jI-lT-z4w"/>
+                            <constraint firstAttribute="trailing" secondItem="bqX-Wf-4qo" secondAttribute="trailing" id="CeS-gv-cNN"/>
+                            <constraint firstAttribute="bottom" secondItem="29u-pt-Yqd" secondAttribute="bottom" id="IVp-ty-79w"/>
+                            <constraint firstItem="mZ7-ij-flD" firstAttribute="centerX" secondItem="b3n-kK-bze" secondAttribute="centerX" id="JPM-4g-AkH"/>
+                            <constraint firstItem="mZ7-ij-flD" firstAttribute="top" secondItem="6gF-TB-Duu" secondAttribute="bottom" constant="16" id="Mgw-X9-aNU"/>
+                            <constraint firstItem="29u-pt-Yqd" firstAttribute="height" secondItem="b3n-kK-bze" secondAttribute="height" multiplier="0.5" id="NNe-A2-lxq"/>
+                            <constraint firstItem="bqX-Wf-4qo" firstAttribute="leading" secondItem="b3n-kK-bze" secondAttribute="leading" id="Xl6-Og-lPO"/>
+                            <constraint firstItem="29u-pt-Yqd" firstAttribute="top" secondItem="bqX-Wf-4qo" secondAttribute="bottom" id="iuE-DO-LvC"/>
+                            <constraint firstItem="rog-Ne-by3" firstAttribute="top" secondItem="mZ7-ij-flD" secondAttribute="bottom" constant="8" id="jrb-LQ-Sz7"/>
+                            <constraint firstItem="mZ7-ij-flD" firstAttribute="centerY" secondItem="b3n-kK-bze" secondAttribute="centerY" id="k8x-Ga-3mH"/>
+                            <constraint firstItem="29u-pt-Yqd" firstAttribute="leading" secondItem="b3n-kK-bze" secondAttribute="leading" id="v9f-kw-EmI"/>
+                            <constraint firstItem="bqX-Wf-4qo" firstAttribute="top" secondItem="b3n-kK-bze" secondAttribute="top" id="yMX-qe-vkP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lowerView" destination="29u-pt-Yqd" id="OIC-O8-LDD"/>
+                        <outlet property="sourceLanguageButton" destination="lLa-f7-KOr" id="jWg-R1-bsq"/>
+                        <outlet property="sourceTextView" destination="6gF-TB-Duu" id="csd-Mx-9TN"/>
+                        <outlet property="targetLanguageButton" destination="rog-Ne-by3" id="4bd-LL-uuQ"/>
+                        <outlet property="targetTextView" destination="YCh-BG-Jt9" id="TxS-x2-wJy"/>
+                        <outlet property="translateButton" destination="mZ7-ij-flD" id="sXo-k3-mQz"/>
+                        <outlet property="upperView" destination="bqX-Wf-4qo" id="vyy-Pu-Wek"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XHI-bp-aX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="33"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="766" height="1660"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
+        <image name="translate" width="100" height="100"/>
+    </resources>
+</document>

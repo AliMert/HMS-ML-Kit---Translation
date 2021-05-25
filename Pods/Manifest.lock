@@ -1,0 +1,24 @@
+PODS:
+  - AGConnectCore (1.3.0.300):
+    - HMFoundation (~> 1.3.0)
+  - HMFoundation (1.3.0.300)
+  - MLTranslate (2.0.5.300)
+
+DEPENDENCIES:
+  - AGConnectCore
+  - MLTranslate (~> 2.0.5.300)
+
+SPEC REPOS:
+  trunk:
+    - AGConnectCore
+    - HMFoundation
+    - MLTranslate
+
+SPEC CHECKSUMS:
+  AGConnectCore: ac423191ee4137beca031f4d95f5fddd269a1c18
+  HMFoundation: 16628e6942dd9bc4fe8e02da9b898a519643183c
+  MLTranslate: 3c96dc4d16955d71bd4ef4e50281d6ab71884697
+
+PODFILE CHECKSUM: 8808f447a4ce680f8f1a3ee5447de4c0fd99d441
+
+COCOAPODS: 1.10.1
