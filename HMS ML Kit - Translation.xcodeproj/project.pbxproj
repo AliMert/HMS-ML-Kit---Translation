@@ -416,6 +416,7 @@
 				DEVELOPMENT_TEAM = R38K25C8UB;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "HMS ML Kit - Translation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -439,6 +440,7 @@
 				DEVELOPMENT_TEAM = R38K25C8UB;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "HMS ML Kit - Translation/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
